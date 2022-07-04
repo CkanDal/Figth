@@ -1,11 +1,7 @@
 import capitalize from "../src/capitalize.js"
+import { strict as assert } from 'assert';
 
-if (capitalize('hexlet') !== 'Hexlet') { // Если результат функции не равен ожидаемому значению
-    // Выбрасываем исключение и завершаем выполнение теста
-    throw new Error('Функция работает неверно!');
-  }
-  if (capitalize('') !== '') {
-    throw new Error('Функция работает неверно!');
-  }
+assert.strictEqual(capitalize(""), "");
+assert.strictEqual(capitalize("hexlet"),"2exlet");
   
-  console.log('Все тесты пройдены!');
+  
